@@ -1,0 +1,27 @@
+{
+  "name": "gwscan-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "deploy": "ts-node src/deploy-commands",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@discordjs/builders": "0.13.0",
+    "@discordjs/rest": "0.4.1",
+    "bignumber.js": "9.0.2",
+    "discord-api-types": "0.32.0",
+    "discord.js": "13.6.0",
+    "dotenv": "16.0.0",
+    "graphql": "16.4.0",
+    "graphql-request": "4.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4"
+  }
+}

@@ -11,3 +11,4 @@ export const config = {
 export const LOGO_URL = 'https://www.gwscan.com/icons/nervina-logo.svg'
 export const GWSCAN_URL = 'https://www.gwscan.com'
 export const CKB_DECIMALS = 8
+export const PRIMARY_COLOR = '#E03C8A'

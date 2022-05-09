@@ -57,8 +57,8 @@ export const execute = async (intereaction: CommandInteraction<CacheType>) => {
   if (!transaction) return intereaction.reply({ content: `Transaction "${hash}" not found`, ephemeral: true })
 
   const fields = [
-    { name: 'From', value: transaction.from_account.eth_address },
-    { name: 'To', value: transaction.to_account.eth_address },
+    { name: 'From', value: `[${transaction.from_account.eth_address}](${GWSCAN_URL}/address/${transaction.from_account.eth_address})` },
+    { name: 'To', value: `[${transaction.to_account.eth_address}](${GWSCAN_URL}/address/${transaction.to_account.eth_address})` },
     transaction.polyjuice ? { name: 'Value', value: formatValue(transaction.polyjuice.value ?? '0', CKB_DECIMALS, 'CKB') } : null,
     transaction.polyjuice ? { name: 'Tx Status', value: transaction.polyjuice.status } : null,
     { name: 'Block', value: `${transaction.block?.number ?? '-'}` },

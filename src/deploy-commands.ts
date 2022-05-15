@@ -6,7 +6,7 @@ import * as cmds from './commands'
 const rest = new REST({ version: '9' }).setToken(config.token!)
 const commands = Object.values(cmds).map(c => c.data.toJSON())
 
-rest.put(Routes.applicationGuildCommands(config.clientId!, config.guildId!), { body: commands })
+rest.put(Routes.applicationGuildCommands(config.appId!, config.guildId!), { body: commands })
   .then(() => console.log("Deployed commands successfully"))
   .catch(console.error)
 

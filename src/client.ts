@@ -1,4 +1,7 @@
-import { GraphQLClient } from "graphql-request";
+/*
+ * GraphQL Client, used to make GraphQL requests
+ */
+import { GraphQLClient } from "graphql-request"
 import { config } from './config'
 
 if (!config.server) {

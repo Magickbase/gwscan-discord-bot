@@ -29,6 +29,9 @@ const query = gql`
     }
   `
 
+/**
+ * register a slash command of the bot
+ */
 export const data = new SlashCommandBuilder()
   .setName('account')
   .setDescription('Replies account info')
@@ -45,6 +48,9 @@ export const data = new SlashCommandBuilder()
       )
   )
 
+/**
+ * handle request from the slash command
+ */
 export const execute = async (intereaction: CommandInteraction<CacheType>) => {
   const address = intereaction.options.getString('address')
   const isInvisible = intereaction.options.getString('private') === 'true'

@@ -42,6 +42,9 @@ const query = gql`
     }
   `
 
+/**
+ * register a slash command of the bot
+ */
 export const data = new SlashCommandBuilder()
   .setName('transaction')
   .setDescription('Replies transaction info')
@@ -50,6 +53,9 @@ export const data = new SlashCommandBuilder()
       .setDescription('Transaction hash')
       .setRequired(true))
 
+/**
+ * handle request from the slash command
+ */
 export const execute = async (intereaction: CommandInteraction<CacheType>) => {
   const hash = intereaction.options.getString('hash')
   const { transaction, token_transfers } = await client.request(query, { hash })

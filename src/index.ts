@@ -11,6 +11,7 @@ client.once('ready', () => {
 
 const commands = new Collection<string, { data: Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">, execute: (i: CommandInteraction<CacheType>) => Promise<void> }>()
 
+// cache all commands and their callback in `commands` map
 Object.entries(cmds).forEach(([name, value]) => commands.set(name, value))
 
 client.on('interactionCreate', async (interaction) => {
@@ -20,6 +21,7 @@ client.on('interactionCreate', async (interaction) => {
   if (!command) return
 
   try {
+    // handle requests from users
     await command.execute(interaction)
   } catch (err) {
     console.error(err)

@@ -21,7 +21,7 @@ We'll go through the entire progress of building a discord bot with discord.js(D
     - Application id, also can be got in application's general information page, https://discord.com/developers/applications;
     - Guild id: right click your discord server used to debug the bot and copy its id.
 
-3. A GwScan Public API service as data source, you should deploy your own [GwScan](https://github.com/nervina-labs/godwoken_explorer) service. For convenience, we provide a [public endpoint](https://api.gwscan.com/graphql)
+3. A GwScan Public API service as data source, you should deploy your own [GwScan](https://github.com/nervina-labs/godwoken_explorer) service. For convenience, we provide a public endpoint for godwoken v1.1 soon.
 
 #### Begin by creating an empty project
 

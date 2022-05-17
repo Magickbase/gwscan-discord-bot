@@ -2,11 +2,11 @@
 
 ### Introduction to GwScan Public API Service
 
-[GwScan](https://www.gwscan.com/) is a blockchain explorer delivering data from Godwoken, backed by GwScan public API Service, a set of infrastructure to provide a robust access to Godwoken, leaving developers to focus on their own products and to be a buidler.
+[GwScan](https://www.gwscan.com/) is a blockchain explorer delivering data from Godwoken, backed by GwScan public API Service, a set of infrastructure to provide robust access to Godwoken, leaving developers to focus on their own products and to be a buidler.
 
 ### Why you should build your application based on GwScan Public API Service
 
-GwScan Public API provides a set of well-grained APIs for DApp developers and concealled obscure concepts derived from Godwoken. It exposes APIs in GraphQL, which is more flexible and friendly for application development.
+GwScan Public API provides a set of well-grained APIs for DApp developers and concealed obscure concepts derived from Godwoken. It exposes APIs in GraphQL, which is more flexible and friendly for application development.
 
 ### Quickstart
 
@@ -21,7 +21,7 @@ We'll go through the entire progress of building a discord bot with discord.js(D
     - Application id, also can be got in application's general information page, https://discord.com/developers/applications;
     - Guild id: right click your discord server used to debug the bot and copy its id.
 
-3. A GwScan Public API service as data source, you should deploy your own [GwScan](https://github.com/nervina-labs/godwoken_explorer) service. For convenience, we provide a public endpoint for godwoken v1.1 soon.
+3. A GwScan Public API service as a data source, you should deploy your own [GwScan](https://github.com/nervina-labs/godwoken_explorer) service. For convenience, we provide a public endpoint for godwoken v1.1 soon.
 
 #### Begin by creating an empty project
 
@@ -31,9 +31,9 @@ We should create an empty directory to start our project
 $ mkdir gwscan-bot && cd gwscan-bot && npm init -y
 ```
 
-Commands above will create an initial npm project with name the same as the directory.
+Commands above will create an initial npm project with a name the same as that of directory.
 
-Our project will grow into as follows,
+Our project will grow as follows,
 
 ```sh
 .
@@ -88,7 +88,7 @@ Add typescript config in `tsconfig.json`
 
 We are going to add source code in `./src` and expect to compile it to `./lib`.
 
-Add npm scripts in `package.jsno` to faciliate our work
+Add npm scripts in `package.jsno` to facilitate our work
 
 ```json
 {
@@ -259,9 +259,9 @@ const query = gql`
   `
 ```
 
-It is a composible query based on schema designed in GwScan Public API Service and flexible for various applications, you can inspect the schema in [schema.graphql](https://github.com/Magickbase/godwoken_explorer/blob/main/docs/schema.graphql), or viwe it with a graphql explorer connected to the service.
+It is a composable query based on schema designed in GwScan Public API Service and flexible for various applications, you can inspect the schema in [schema.graphql](https://github.com/Magickbase/godwoken_explorer/blob/main/docs/schema.graphql), or view it with a graphql explorer connected to the service.
 
-Here we query basic fields of an account and get a response as follows,
+Here we query the basic fields of an account and get a response as follows,
 
 ```json
 {
@@ -434,7 +434,7 @@ export const execute = async (intereaction: CommandInteraction<CacheType>) => {
 }
 ```
 
-Thanks to composibility of graphql, we can request transaction info and its internal transfers in a single command.
+Thanks to composability of graphql, we can request transaction info and its internal transfers in a single command.
 
 ```typescript
 const query = gql`
@@ -503,11 +503,11 @@ rest.put(Routes.applicationGuildCommands(config.clientId!, config.guildId!), { b
   .catch(console.error)
 ```
 
-After this step, our bot will prompt user with registed commands when they type `/account` or `/transaction`.
+After this step, our bot will prompt user with registered commands when they type `/account` or `/transaction`.
 
 #### Deploy our bot
 
-Once commands are registered, we should deploy our bot to handle request from users.
+Once commands are registered, we should deploy our bot to handle requests from users.
 
 Let's add an entry of our program
 

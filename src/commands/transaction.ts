@@ -35,7 +35,7 @@ const query = gql`
         to_address_hash
         udt {
           id
-					decimal
+          decimal
           symbol
         }
       }

@@ -16,7 +16,7 @@
     "bignumber.js": "9.0.2",
     "discord-api-types": "0.32.0",
     "discord.js": "13.6.0",
-    "dotenv": "16.0.0",
+    "dotenv": "16.4.5",
     "graphql": "16.4.0",
     "graphql-request": "4.2.0"
   },
